@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Sign Up
+{% endblock title %}
+
+{% block content %}
+    <form class="mt-5" method="POST" action="{% url 'authentication:signup' %}">
+        {% csrf_token %}
+{#        {% if error_message %}#}
+{#        <div class="alert alert-danger">#}
+{#            {{ error_message }}#}
+{#        </div>#}
+{#        {% endif %}#}
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" name="username">
+        </div>
+
+        <div class="mb-3">
+            <label for="firstname" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstname" name="firstname">
+        </div>
+
+        <div class="mb-3">
+            <label for="lastname" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastname" name="lastname">
+        </div>
+
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" id="password">
+        </div>
+
+        <div class="mb-3">
+            <label for="confirmpassword" class="form-label">Confirm Password</label>
+            <input type="password" name="confirmpassword" class="form-control" id="confirmpassword">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock content %}
