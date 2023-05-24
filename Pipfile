@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 django = "*"
 six = "*"
+python-decouple = "*"
 
 [dev-packages]
 
