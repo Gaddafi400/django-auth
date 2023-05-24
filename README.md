@@ -1,4 +1,4 @@
 # django-auth
-Django authentication using email verification to activate account to login
+Django's authentication using email verification to activate account to login
 
 
